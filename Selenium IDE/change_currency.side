@@ -1,0 +1,79 @@
+{
+  "id": "215d6dd4-f8c0-4db9-95d0-e5c64d673364",
+  "version": "2.0",
+  "name": "change_currency",
+  "url": "https://www.booking.com/",
+  "tests": [{
+    "id": "620f23ea-a60a-4ced-a84c-965de505dbba",
+    "name": "currency_change",
+    "commands": [{
+      "id": "742a495d-bf39-4ce7-9936-1d0bc0fbf2b9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.booking.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "383ed6a1-994a-4e41-a005-58b135cc788e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34a19c34-0a31-499c-b75c-0ef67ad02f9c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.c62ffa0b45 > .f419a93f12:nth-child(1) .e4adce92df",
+      "targets": [
+        ["css=.c62ffa0b45 > .f419a93f12:nth-child(1) .e4adce92df", "css:finder"],
+        ["xpath=//body[@id='b2indexPage']/div[2]/div/div/header/div/nav/div[2]/span/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29392334-6edc-498f-b670-3cd8d3cc4179",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c62ffa0b45 > .f419a93f12:nth-child(1) .e4adce92df",
+      "targets": [
+        ["css=.c62ffa0b45 > .f419a93f12:nth-child(1) .e4adce92df", "css:finder"],
+        ["xpath=//body[@id='b2indexPage']/div[2]/div/div/header/div/nav/div[2]/span/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a530fcc-f082-4589-81a4-608a58f6d2f1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.c62ffa0b45 > .f419a93f12:nth-child(1) .e4adce92df",
+      "targets": [
+        ["css=.c62ffa0b45 > .f419a93f12:nth-child(1) .e4adce92df", "css:finder"],
+        ["xpath=//body[@id='b2indexPage']/div[2]/div/div/header/div/nav/div[2]/span/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5c5d11e-4cdf-41a2-b4e0-c3a730e8efd9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c624d7469d:nth-child(4) > .b817090550:nth-child(4) .CurrencyPicker_currency",
+      "targets": [
+        ["css=.c624d7469d:nth-child(4) > .b817090550:nth-child(4) .CurrencyPicker_currency", "css:finder"],
+        ["xpath=//div[@id='header_currency_picker']/div/div/div[2]/div/div[3]/div/div/div/ul[4]/li[4]/button/div/div/span/div", "xpath:idRelative"],
+        ["xpath=//ul[4]/li[4]/button/div/div/span/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "446495f4-34f1-4d66-8d9b-dca5a661acc8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["620f23ea-a60a-4ced-a84c-965de505dbba"]
+  }],
+  "urls": [],
+  "plugins": []
+}

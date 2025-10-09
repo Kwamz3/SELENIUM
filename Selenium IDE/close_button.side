@@ -1,0 +1,48 @@
+{
+  "id": "70da0f5a-7f0a-4e54-8236-2a012bbd5ef1",
+  "version": "2.0",
+  "name": "close_button",
+  "url": "https://www.booking.com",
+  "tests": [{
+    "id": "97e1500a-c9fa-4d25-a933-0d305d5768a8",
+    "name": "close_button",
+    "commands": [{
+      "id": "2e15a5e9-6e2d-4bfc-8fb0-73f57d078438",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6682191f-26d7-487f-a58c-0225122fd013",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e482376-b75a-4c40-a189-84559f4de248",
+      "comment": "",
+      "command": "click",
+      "target": "id=bodyconstraint-inner",
+      "targets": [
+        ["id=bodyconstraint-inner", "id"],
+        ["css=#bodyconstraint-inner", "css:finder"],
+        ["xpath=//div[@id='bodyconstraint-inner']", "xpath:attributes"],
+        ["xpath=//div[@id='bodyconstraint']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ba665ab7-ea4d-4a83-b0c4-a975b55c5459",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["97e1500a-c9fa-4d25-a933-0d305d5768a8"]
+  }],
+  "urls": ["https://www.booking.com/"],
+  "plugins": []
+}

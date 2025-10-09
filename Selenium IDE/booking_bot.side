@@ -1,0 +1,224 @@
+{
+  "id": "e16c0dfc-8f17-4e86-ad6d-d16325c7c98f",
+  "version": "2.0",
+  "name": "booking_bot",
+  "url": "https://www.booking.com",
+  "tests": [{
+    "id": "377a71e0-cdc7-4e3f-9e59-81e833d34ffb",
+    "name": "test_program",
+    "commands": [{
+      "id": "5392f057-9d97-4d4d-924f-b7b06ca5d898",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fd80ca4-b2cf-40b1-aba9-c66c985e7d31",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78b15c7e-3df0-44da-acc8-6dbf626d57dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=:rh:",
+      "targets": [
+        ["id=:rh:", "id"],
+        ["name=ss", "name"],
+        ["css=#\\3Arh\\3A", "css:finder"],
+        ["xpath=//input[@id=':rh:']", "xpath:attributes"],
+        ["xpath=//div[@id='indexsearch']/div[2]/div/form/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2658029-5804-4a35-a030-9bc1e692fbdd",
+      "comment": "",
+      "command": "type",
+      "target": "id=:rh:",
+      "targets": [
+        ["id=:rh:", "id"],
+        ["name=ss", "name"],
+        ["css=#\\3Arh\\3A", "css:finder"],
+        ["xpath=//input[@id=':rh:']", "xpath:attributes"],
+        ["xpath=//div[@id='indexsearch']/div[2]/div/form/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "East Legon"
+    }, {
+      "id": "fd7dd543-3f91-4079-98cd-00e0bd395ae5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#autocomplete-result-0 .abf093bdfe",
+      "targets": [
+        ["css=#autocomplete-result-0 .abf093bdfe", "css:finder"],
+        ["xpath=//li[@id='autocomplete-result-0']/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//li/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c458134-8d9c-4248-8198-76ee0d4207f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ebbedaf8ac:nth-child(2) > .a8887b152e",
+      "targets": [
+        ["css=.ebbedaf8ac:nth-child(2) > .a8887b152e", "css:finder"],
+        ["xpath=//div[@id='indexsearch']/div[2]/div/form/div/div[2]/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Check-in Date')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "959ad0da-046a-4fea-b5ea-b77fe4d5e962",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ebbedaf8ac:nth-child(2) > .a8887b152e",
+      "targets": [
+        ["css=.ebbedaf8ac:nth-child(2) > .a8887b152e", "css:finder"],
+        ["xpath=//div[@id='indexsearch']/div[2]/div/form/div/div[2]/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Check-in Date')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db8bb6c9-6643-49f6-be78-b89b8c7f36d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d358556c65:nth-child(1) tr:nth-child(3) > .b80d5adb18:nth-child(5) > .cf06f772fa",
+      "targets": [
+        ["css=.d358556c65:nth-child(1) tr:nth-child(3) > .b80d5adb18:nth-child(5) > .cf06f772fa", "css:finder"],
+        ["xpath=//div[@id='calendar-searchboxdatepicker']/div/div/div/div/table/tbody/tr[3]/td[5]/span", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'15')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "873f8a11-e435-4c9f-8652-814985c30090",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d358556c65:nth-child(1) > .e1eebb6a1e",
+      "targets": [
+        ["css=.d358556c65:nth-child(1) > .e1eebb6a1e", "css:finder"],
+        ["xpath=//div[@id='calendar-searchboxdatepicker']/div/div/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'November 2024')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a68e306-011a-4513-a944-678fe87bb8f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) > .b80d5adb18:nth-child(6) > .a416e86ed7",
+      "targets": [
+        ["css=tr:nth-child(5) > .b80d5adb18:nth-child(6) > .a416e86ed7", "css:finder"],
+        ["xpath=//div[@id='calendar-searchboxdatepicker']/div/div/div/div/table/tbody/tr[5]/td[6]/span", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'30')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc154ee9-1546-43f7-9965-20e0bb700e38",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c7ce171153",
+      "targets": [
+        ["css=.c7ce171153", "css:finder"],
+        ["xpath=//div[@id='indexsearch']/div[2]/div/form/div/div[3]/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2 adults · 0 children · 1 room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82681a1b-c60f-4c19-8476-4b27ef051946",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a7a72174b8:nth-child(1) .f4d78af12a",
+      "targets": [
+        ["css=.a7a72174b8:nth-child(1) .f4d78af12a", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id=':ri:']/div/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e46ab153-7054-4e06-a00e-8f405dcce51e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c213355c26 > .e4adce92df",
+      "targets": [
+        ["css=.c213355c26 > .e4adce92df", "css:finder"],
+        ["xpath=//div[@id=':ri:']/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3925989-74b8-4d7d-a6af-aa83ad264ce7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a2abacf76b > .e4adce92df",
+      "targets": [
+        ["css=.a2abacf76b > .e4adce92df", "css:finder"],
+        ["xpath=//div[@id='indexsearch']/div[2]/div/form/div/div[4]/button/span", "xpath:idRelative"],
+        ["xpath=//div[4]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab800df8-3a05-4dca-94c7-c43083916889",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.cac967781c",
+      "targets": [
+        ["css=.cac967781c", "css:finder"],
+        ["xpath=//div[@id='bodyconstraint-inner']/div[2]/div/div[2]/div[3]/div[2]/div[2]/div/div/div/div/span/button/span", "xpath:idRelative"],
+        ["xpath=//div/div/span/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0fe1e9a-3c20-4007-a238-b961537868af",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.cac967781c",
+      "targets": [
+        ["css=.cac967781c", "css:finder"],
+        ["xpath=//div[@id='bodyconstraint-inner']/div[2]/div/div[2]/div[3]/div[2]/div[2]/div/div/div/div/span/button/span", "xpath:idRelative"],
+        ["xpath=//div/div/span/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7560913-0b0a-4b1b-b253-73932f3472f5",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.cac967781c",
+      "targets": [
+        ["css=.cac967781c", "css:finder"],
+        ["xpath=//div[@id='bodyconstraint-inner']/div[2]/div/div[2]/div[3]/div[2]/div[2]/div/div/div/div/span/button/span", "xpath:idRelative"],
+        ["xpath=//div/div/span/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56dbacdb-a338-4e5a-b3ba-474ad004e23d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.f4552b6561 svg",
+      "targets": [
+        ["css=.f4552b6561 svg", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "63fd615b-b952-4e56-9a3c-9f1d66911b14",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["377a71e0-cdc7-4e3f-9e59-81e833d34ffb"]
+  }],
+  "urls": ["https://www.booking.com/"],
+  "plugins": []
+}
