@@ -11,6 +11,8 @@ driver = webdriver.Chrome()
 # Open Booking.com
 driver.get("https://www.booking.com")
 
+driver.maximize_window()
+
 # Wait until the page loads and find the search box
 wait = WebDriverWait(driver, 10)
 search_box = wait.until(EC.presence_of_element_located((By.ID, "ss")))
