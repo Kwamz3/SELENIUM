@@ -1,12 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # Setup WebDriver (use the appropriate path for your WebDriver)
-driver = webdriver.Chrome()
+PATH = r"C:\Subdrive\chromedriver-win64\chromedriver.exe"
+service = Service(PATH)
+driver = webdriver.Chrome(service=service)
 
 # Open Booking.com
 driver.get("https://www.booking.com")

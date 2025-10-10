@@ -1,8 +1,9 @@
 from selenium import webdriver
-
+import time
 
 driver = webdriver.Chrome()
 
 driver.get("http://selenium.dev")
 
-driver.quit()
+
+time.sleep(50)
