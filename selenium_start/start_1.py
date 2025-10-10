@@ -1,12 +1,13 @@
 from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
 import time
 
-# PATH = r"C:\Subdrive\chromedriver-win64\chromedriver.exe"
 
-# service = Service(PATH)
-driver = webdriver.Chrome()#service=service)
+driver = webdriver.Chrome()
 
 driver.get("http://selenium.dev")
+
+title = driver.title
+assert title == "Selenium" 
+print(title + " is the right webpage")
 
 time.sleep(50)
