@@ -8,5 +8,5 @@ driver = webdriver.Chrome()
 
 driver.get("https://www.wakanow.com.gh/en-gh?gad_campaignid=22361038964")
 
-
+time.sleep(50)
 driver.quit()
