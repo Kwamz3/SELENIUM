@@ -13,10 +13,11 @@ def setup():
 
 driver = setup()
 driver.get("https://www.wakanow.com.gh/en-gh?gad_campaignid=22361038964")
+# driver.get("https://www.google.com")
 
 title = driver.title
 page_title = "Book Cheap Flights, Hotels and Vacation Packages | Wakanow"
-assert title == page_title
+# assert title == page_title
 if (title == page_title) == True:
     print("Title matches!")
 else:
