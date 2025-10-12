@@ -6,14 +6,26 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 
-driver = webdriver.Chrome()
-driver.maximize_window()
+def setup():
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    return driver
 
+driver = setup()
 driver.get("https://www.wakanow.com.gh/en-gh?gad_campaignid=22361038964")
+
+title = driver.title
+assert title == "Book Cheap Flights, Hotels and Vacation Packages | Wakanow"
+print(title)
 
 wait = WebDriverWait(driver, 10)
 pop_close = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "btn-close")))
 pop_close.click()
+
+# wait2 = WebDriverWait(driver, 10)
+# pop_close2 = wait2.until(EC.presence_of_element_located((By.ID, "webklipper-publisher-widget-container-notification-close-div")))
+# pop_close2.click
+
 
 time.sleep(70)
 driver.quit()
