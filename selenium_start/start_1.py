@@ -15,8 +15,12 @@ driver = setup()
 driver.get("https://www.wakanow.com.gh/en-gh?gad_campaignid=22361038964")
 
 title = driver.title
-assert title == "Book Cheap Flights, Hotels and Vacation Packages | Wakanow"
-print(title)
+page_title = "Book Cheap Flights, Hotels and Vacation Packages | Wakanow"
+assert title == page_title
+if (title == page_title) == True:
+    print("Title matches!")
+else:
+    print(f"Expected title'{page_title}' but opened '{title}'")
 
 wait = WebDriverWait(driver, 10)
 pop_close = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "btn-close")))
@@ -28,4 +32,6 @@ pop_close.click()
 
 
 time.sleep(70)
-driver.quit()
+
+def teardown(driver):
+    driver.quit()
