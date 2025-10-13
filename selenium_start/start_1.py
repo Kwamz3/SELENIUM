@@ -30,9 +30,16 @@ def check():
 wait = WebDriverWait(driver, 10)
 pop_close = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "btn-close")))
 pop_close.click()
+
 wait_2 = WebDriverWait(driver, 10)
 pop_close_2 = wait_2.until(EC.presence_of_element_located((By.CLASS_NAME, "cm__btn")))
 pop_close_2.click()
+
+# try:
+#     pop_close_2 = driver.find_element(By.CLASS_NAME, 'cm__btn')
+#     pop_close_2.click()
+# except:
+#     print("No pop-up seen. Skipping...")
 
 # wait2 = WebDriverWait(driver, 10)
 # pop_close2 = wait2.until(EC.presence_of_element_located((By.ID, "webklipper-publisher-widget-container-notification-close-div")))
