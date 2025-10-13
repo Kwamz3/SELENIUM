@@ -3,10 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+import os
 import time
 
 
 def setup():
+    os.environ['PATH'] += r"C:\Subdrive\chromedriver-win64"
     driver = webdriver.Chrome()
     driver.maximize_window()
     return driver
@@ -14,6 +16,7 @@ def setup():
 driver = setup()
 driver.get("https://www.wakanow.com.gh/en-gh?gad_campaignid=22361038964")
 # driver.get("https://www.google.com")
+driver.implicitly_wait(10)
 
 title = driver.title
 page_title = "Book Cheap Flights, Hotels and Vacation Packages | Wakanow"
@@ -35,4 +38,4 @@ pop_close.click()
 time.sleep(70)
 
 def teardown(driver):
-    driver.quit()
+    driver.quit()   

@@ -1,9 +1,10 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-
+os.environ['PATH'] += r"C:\Subdrive\chromedriver-win64"
 driver = webdriver.Chrome()
 
 driver.get("http://selenium.dev")
