@@ -27,9 +27,6 @@ class Booking(webdriver.Chrome):
             self.quit()
             print(f"Expected title'{const.PAGE_TITLE}' but opened '{self.title}'")
             
-    def try_code(self):
-        print("This is a section")
-            
     def stop_driver(self):
         self.quit()
         
