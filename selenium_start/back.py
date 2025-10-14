@@ -10,6 +10,8 @@ class Booking(webdriver.Chrome):
         os.environ['PATH'] += self.driver_path
         self.teardown = teardown
         super(Booking, self).__init__()
+        self.implicitly_wait(15)
+        self.maximize_window()
     
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.teardown:
@@ -17,7 +19,6 @@ class Booking(webdriver.Chrome):
         
     def open_page(self):
         self.get(const.BASE_URL)
-        self.maximize_window()
         
     def check_page(self):
         if const.PAGE_TITLE == self.title:
