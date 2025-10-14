@@ -1,5 +1,7 @@
-from selenium_start.back import Booking
+from back import Booking
 
 
-inst = Booking()
-inst.open_page()
+with Booking() as bot:
+    bot.open_page()
+    # bot.check_page()
+    bot.try_code()
