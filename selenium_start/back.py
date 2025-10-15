@@ -38,6 +38,8 @@ class Booking(webdriver.Chrome):
         else:
             self.quit()
             print(f"Expected title'{const.PAGE_TITLE}' but opened '{self.title}'")
+            
+            
          
     def popup_close(self):
         popup_click = self.find_element(By.CLASS_NAME, "btn-close")
@@ -74,7 +76,7 @@ class Booking(webdriver.Chrome):
     
     
     def select_destination(self, place_to):
-        wait = WebDriverWait(self, 8)
+        wait = WebDriverWait(self, 2)
         city_click = wait.until(EC.presence_of_element_located((By.ID, "itinerary_0_destination")))
         city_click.click()
         for letter in place_to:
