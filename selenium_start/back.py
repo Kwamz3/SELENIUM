@@ -71,6 +71,21 @@ class Booking(webdriver.Chrome):
         print(f"City {place_from} entered successfully!")
         print("Script still running...")
         print("")
+    
+    
+    def select_destination(self, place_to):
+        wait = WebDriverWait(self, 8)
+        city_click = wait.until(EC.presence_of_element_located((By.ID, "itinerary_0_destination")))
+        city_click.click()
+        for letter in place_to:
+            city_click.send_keys(letter)
+            time.sleep(random.uniform(0.1, 0.2))
+        
+        first_result = wait.until(EC.element_to_be_clickable((By.XPATH, f"//p[contains(text(), '{place_to}')]")))
+        first_result.click()
+        print(f"Destination {place_to} entered successfully!")
+        print("Script still running...")
+        print("")
         
         
         
