@@ -1,8 +1,13 @@
 import os
 import const
+import random
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 
@@ -34,6 +39,8 @@ class Booking(webdriver.Chrome):
             self.quit()
             print(f"Expected title'{const.PAGE_TITLE}' but opened '{self.title}'")
             
+            
+         
     def popup_close(self):
         popup_click = self.find_element(By.CLASS_NAME, "btn-close")
         popup_click.click()
@@ -41,17 +48,51 @@ class Booking(webdriver.Chrome):
         print("Script still running...")
         print("")
         
-    def change_currency(self, currency=None):
-            if str(self.find_element(By.CLASS_NAME, "country").text) != "GH | EN | GHS":
-                currency_click = self.find_element(By.CLASS_NAME, "p-3")
-                currency_click.click()
-                print("Currency changed successfully!")
-                print("Script still running...")
-                print("")
-                print(str(self.find_element(By.CLASS_NAME, "country").text))
-            else:
-                print("Currency already set to GHS!")
-                print("Script still running...")
+    # def change_currency(self, currency=None):
+    #         if str(self.find_element(By.CLASS_NAME, "country").text) != "GH | EN | GHS":
+    #             currency_click = self.find_element(By.CLASS_NAME, "p-3")
+    #             currency_click.click()
+    #             print("Currency changed successfully!")
+    #             print("Script still running...")
+    #             print("")
+    #             print(str(self.find_element(By.CLASS_NAME, "country").text))
+    #         else:
+    #             print("Currency already set to GHS!")
+    #             print("Script still running...")
+    
+    def select_city(self, place_from):
+        wait = WebDriverWait(self, 8)
+        city_click = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "from")))
+        city_click.click()
+        for letter in place_from:
+            city_click.send_keys(letter)
+            time.sleep(random.uniform(0.1, 0.2))
+        
+        first_result = wait.until(EC.element_to_be_clickable((By.XPATH, f"//p[contains(text(), '{place_from}')]")))
+        first_result.click()
+        print(f"City {place_from} entered successfully!")
+        print("Script still running...")
+        print("")
+    
+    
+    def select_destination(self, place_to):
+        wait = WebDriverWait(self, 2)
+        city_click = wait.until(EC.presence_of_element_located((By.ID, "itinerary_0_destination")))
+        city_click.click()
+        for letter in place_to:
+            city_click.send_keys(letter)
+            time.sleep(random.uniform(0.1, 0.2))
+        
+        first_result = wait.until(EC.element_to_be_clickable((By.XPATH, f"//p[contains(text(), '{place_to}')]")))
+        first_result.click()
+        print(f"Destination {place_to} entered successfully!")
+        print("Script still running...")
+        print("")
+        
+        
+        
+    def intentional_wait(self, time_allocated):
+        time.sleep(time_allocated)
         
             
     def stop_driver(self):
