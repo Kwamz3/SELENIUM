@@ -6,5 +6,6 @@ with Booking() as bot:
     bot.check_page()
     bot.popup_close()
     bot.select_city(place_from="Accra")
-    bot.intentional_wait(30)
     bot.select_destination(place_to="Berlin")
+    bot.select_dep_date(day="Friday", month="October", date=24, year=2025)
+    bot.intentional_wait(30)

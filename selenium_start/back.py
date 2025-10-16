@@ -19,6 +19,7 @@ class Booking(webdriver.Chrome):
         options = Options()
         options.add_argument("--disable-extensions")
         options.add_argument("--disable-blink-features=AutomationControlled")
+        # options.add_argument("--incognito")
         super(Booking, self).__init__(options=options)
         self.implicitly_wait(15)
         self.maximize_window()
@@ -26,6 +27,9 @@ class Booking(webdriver.Chrome):
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.teardown:
             self.quit()
+            
+    # def clear_cache(self):
+    #     self.execute._cdp_cmd()
         
     def open_page(self):
         self.get(const.BASE_URL)
@@ -62,10 +66,14 @@ class Booking(webdriver.Chrome):
     
     def select_city(self, place_from):
         wait = WebDriverWait(self, 8)
-        city_click = wait.until(EC.presence_of_element_located((By.XPATH, "//h3[contains(.,'Select City')]")))
+        city_trigger = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "from")))
+        city_trigger.click()
+        
+        time.sleep(0.5)
+        city_click = wait.until(EC.element_to_be_clickable((By.ID, "itinerary_0_departure")))
         city_click.click()
         for letter in place_from:
-            city_click.send_keys(letter)
+            city_trigger.send_keys(letter)
             time.sleep(random.uniform(0.1, 0.2))
         
         first_result = wait.until(EC.element_to_be_clickable((By.XPATH, f"//p[contains(text(), '{place_from}')]")))
@@ -76,11 +84,13 @@ class Booking(webdriver.Chrome):
     
     
     def select_destination(self, place_to):
-        wait = WebDriverWait(self, 2)
-        city_click = wait.until(EC.presence_of_element_located((By.ID, "itinerary_0_destination")))
-        city_click.click()
+        wait = WebDriverWait(self, 8)
+        city_trigger = wait.until(EC.presence_of_element_located((By.ID, "itinerary_0_destination")))
+        city_trigger.click()
+        
+        time.sleep(0.5)
         for letter in place_to:
-            city_click.send_keys(letter)
+            city_trigger.send_keys(letter)
             time.sleep(random.uniform(0.1, 0.2))
         
         first_result = wait.until(EC.element_to_be_clickable((By.XPATH, f"//p[contains(text(), '{place_to}')]")))
@@ -89,7 +99,21 @@ class Booking(webdriver.Chrome):
         print("Script still running...")
         print("")
         
-        
+    def select_dep_date(self, day:str, month:str, date:int, year:int):
+        # dep_date_dets = {
+        #     day : 'day',
+        #     month : 'month',
+        #     year : 'year' 
+        # }
+        dep_date = f"{day}, {month} {date}, {year}"
+        wait = WebDriverWait(self, 8)
+        select_date = wait.until(EC.element_to_be_clickable((By.XPATH, f"//span[contains(.,'{date}')]")))
+        select_date.send_keys(f"{date}")
+        # select_date = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, f"day[contains(.,'{dep_date}')]")))
+        # select_date.click()
+        print(f"Destination {dep_date} entered successfully!")
+        print("Script still running...")
+        print("")
         
     def intentional_wait(self, time_allocated):
         time.sleep(time_allocated)

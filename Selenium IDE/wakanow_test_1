@@ -27,7 +27,7 @@
       "target": "css=.col-sm-3:nth-child(1) .control-value",
       "targets": [
         ["css=.col-sm-3:nth-child(1) .control-value", "css:finder"],
-        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div/div/location-dropdown/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div/div/location-dropdown/div/div/div/a", "xpath:idRelative"],
         ["xpath=//h3", "xpath:position"],
         ["xpath=//h3[contains(.,'Select City')]", "xpath:innerText"]
       ],
