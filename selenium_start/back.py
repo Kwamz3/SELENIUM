@@ -62,7 +62,7 @@ class Booking(webdriver.Chrome):
     
     def select_city(self, place_from):
         wait = WebDriverWait(self, 8)
-        city_click = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "from")))
+        city_click = wait.until(EC.presence_of_element_located((By.XPATH, "//h3[contains(.,'Select City')]")))
         city_click.click()
         for letter in place_from:
             city_click.send_keys(letter)

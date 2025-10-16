@@ -1,0 +1,178 @@
+{
+  "id": "e8ddba0d-af0a-4a3a-bb4d-205d16ce0d89",
+  "version": "2.0",
+  "name": "wakanow bot",
+  "url": "https://www.wakanow.com.gh",
+  "tests": [{
+    "id": "a56e55bb-a97f-4e3c-b105-cfb337080aca",
+    "name": "wakanow_test_1",
+    "commands": [{
+      "id": "cbd44dd3-3b15-467f-a5e8-f0395c6c1145",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bf42e47-49b4-4033-a52d-fad7aa64ae58",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7868ddb8-0c81-4268-9986-064adb5e6e9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-3:nth-child(1) .control-value",
+      "targets": [
+        ["css=.col-sm-3:nth-child(1) .control-value", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div/div/location-dropdown/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Select City')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ac26173-ee87-414d-9a0d-38fe9ece1775",
+      "comment": "",
+      "command": "click",
+      "target": "id=itinerary_0_departure",
+      "targets": [
+        ["id=itinerary_0_departure", "id"],
+        ["css=#itinerary_0_departure", "css:finder"],
+        ["xpath=//input[@id='itinerary_0_departure']", "xpath:attributes"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div/div/location-dropdown/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "166a01d4-3329-416d-994a-a1a4be2f86ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=itinerary_0_departure",
+      "targets": [
+        ["id=itinerary_0_departure", "id"],
+        ["css=#itinerary_0_departure", "css:finder"],
+        ["xpath=//input[@id='itinerary_0_departure']", "xpath:attributes"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div/div/location-dropdown/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Accra"
+    }, {
+      "id": "509fa328-4bc0-42b0-93df-7f533ff7f328",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lh-base",
+      "targets": [
+        ["css=.lh-base", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div/div/location-dropdown/div/div[2]/div[2]/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Accra, Ghana')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3eee6028-8d1b-4e54-a896-eea5f532bf84",
+      "comment": "",
+      "command": "type",
+      "target": "id=itinerary_0_destination",
+      "targets": [
+        ["id=itinerary_0_destination", "id"],
+        ["css=#itinerary_0_destination", "css:finder"],
+        ["xpath=//input[@id='itinerary_0_destination']", "xpath:attributes"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div[2]/div/location-dropdown/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/location-dropdown/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Berlin"
+    }, {
+      "id": "38835a22-038b-4428-b1a1-f64cb2a9c27e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-item:nth-child(3) .flex-fill",
+      "targets": [
+        ["css=.dropdown-item:nth-child(3) .flex-fill", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div[2]/div/location-dropdown/div/div[2]/div[2]/div[3]/a/div", "xpath:idRelative"],
+        ["xpath=//div[3]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fe264a8-9c98-40eb-96a0-982e2381934a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ngb-dp-month:nth-child(1) .ngb-dp-week:nth-child(6) > .ngb-dp-day:nth-child(5) > .custom-day",
+      "targets": [
+        ["css=.ngb-dp-month:nth-child(1) .ngb-dp-week:nth-child(6) > .ngb-dp-day:nth-child(5) > .custom-day", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div[3]/flight-calendar/app-calendar/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[6]/div[5]/span", "xpath:idRelative"],
+        ["xpath=//div[6]/div[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'31')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35fa88eb-0575-4b73-8b64-2cc6494ac067",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ngb-dp-week:nth-child(6) > .ngb-dp-day:nth-child(7) > .custom-day",
+      "targets": [
+        ["css=.ngb-dp-week:nth-child(6) > .ngb-dp-day:nth-child(7) > .custom-day", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div[3]/flight-calendar/app-calendar/div/ngb-datepicker/div[2]/div[2]/ngb-datepicker-month/div[6]/div[7]/span", "xpath:idRelative"],
+        ["xpath=//div[6]/div[7]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bf006fb-197b-4217-af3c-afd4b1811477",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-4 > .passenger-numbers > .passenger-number:nth-child(2) > span",
+      "targets": [
+        ["css=.mb-4 > .passenger-numbers > .passenger-number:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div[4]/div/flight-passenger-select/div/div[2]/div/div/div[2]/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fb7f385-c453-4839-9193-6dc44d9c3bee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d-flex > div:nth-child(1) .passenger-number:nth-child(2) > span",
+      "targets": [
+        ["css=.d-flex > div:nth-child(1) .passenger-number:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/div[2]/div/div[4]/div/flight-passenger-select/div/div[2]/div/div[2]/div/div[2]/a[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7c3ac41-2875-44f7-9359-21b250b5ca07",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-3:nth-child(2) > .control",
+      "targets": [
+        ["css=.col-sm-3:nth-child(2) > .control", "css:finder"],
+        ["xpath=//div[@id='ngb-nav-222-panel']/search-widget-flight/form/div/div[2]/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "118a3ba7-888b-45e8-9f4f-6a96d52acfa2",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-link",
+      "targets": [
+        ["id=search-link", "id"],
+        ["css=#search-link", "css:finder"],
+        ["xpath=//button[@id='search-link']", "xpath:attributes"],
+        ["xpath=//div[@id='ngb-nav-0-panel']/search-widget-flight/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "10079690-bd2e-4d25-91f9-6de590d0683c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a56e55bb-a97f-4e3c-b105-cfb337080aca"]
+  }],
+  "urls": ["https://www.wakanow.com.gh/"],
+  "plugins": []
+}
