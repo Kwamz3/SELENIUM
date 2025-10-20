@@ -99,18 +99,34 @@ class Booking(webdriver.Chrome):
         print("Script still running...")
         print("")
         
-    def select_dep_date(self, day:str, month:str, date:int, year:int):
+    def select_dep_date(self, day:str, month:str, date:str, year:int):
         # dep_date_dets = {
         #     day : 'day',
         #     month : 'month',
         #     year : 'year' 
         # }
-        dep_date = f"{day}, {month} {date}, {year}"
+        dep_date = f"{day} {month} {date} {year}"
         wait = WebDriverWait(self, 8)
-        select_date = wait.until(EC.element_to_be_clickable((By.XPATH, f"//span[contains(.,'{date}')]")))
-        select_date.send_keys(f"{date}")
-        # select_date = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, f"day[contains(.,'{dep_date}')]")))
+        # select_date = wait.until(EC.element_to_be_clickable((By.XPATH, f"//span[contains(.,'{date}')]")))
+        # select_date = wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(.,'{dep_date}')]")))
         # select_date.click()
+        
+        # for departure
+        # xpath_dep = f"//div[contains(@class, 'date-control') and contains(@class, 'departure')]//h3[contains(., '{date}') and contains(., '{month}')]".format({day}, {month} , "’" + str(year)[2:])
+        # dep_elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_dep)))
+        # dep_elem.click()
+
+        # # for return
+        # xpath_ret = f"//div[contains(@class, 'date-control') and contains(@class, 'return')]//h3[contains(., '{}') and contains(., '{}')]".format(return_day, {mo} + "’" + str(year)[2:])
+        # ret_elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_ret)))
+        # ret_elem.click()
+        
+        # time.sleep(0.5)
+        # for letter in date:
+        #     select_date.send_keys(letter)
+        #     time.sleep(random.uniform(0.1, 0.2))
+    
+        # select_date1 = wait.until(EC.element_to_be_clickable((By.XPATH, f"//span[contains(.,'{month} {year}')]")))
         print(f"Destination {dep_date} entered successfully!")
         print("Script still running...")
         print("")
@@ -121,4 +137,3 @@ class Booking(webdriver.Chrome):
             
     def stop_driver(self):
         self.quit()
-        
