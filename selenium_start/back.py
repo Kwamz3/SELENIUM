@@ -100,34 +100,47 @@ class Booking(webdriver.Chrome):
         print("")
         
     def select_dep_date(self, day:str, month:str, date:str, year:int):
-        # dep_date_dets = {
-        #     day : 'day',
-        #     month : 'month',
-        #     year : 'year' 
-        # }
-        dep_date = f"{day} {month} {date} {year}"
         wait = WebDriverWait(self, 8)
-        # select_date = wait.until(EC.element_to_be_clickable((By.XPATH, f"//span[contains(.,'{date}')]")))
-        # select_date = wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(.,'{dep_date}')]")))
-        # select_date.click()
-        
-        # for departure
-        # xpath_dep = f"//div[contains(@class, 'date-control') and contains(@class, 'departure')]//h3[contains(., '{date}') and contains(., '{month}')]".format({day}, {month} , "’" + str(year)[2:])
-        # dep_elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_dep)))
-        # dep_elem.click()
-
-        # # for return
-        # xpath_ret = f"//div[contains(@class, 'date-control') and contains(@class, 'return')]//h3[contains(., '{}') and contains(., '{}')]".format(return_day, {mo} + "’" + str(year)[2:])
-        # ret_elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_ret)))
-        # ret_elem.click()
-        
-        # time.sleep(0.5)
-        # for letter in date:
-        #     select_date.send_keys(letter)
-        #     time.sleep(random.uniform(0.1, 0.2))
+        aria_label = f"{day}, {month} {date}, {year}"
+        select_dep_click = wait.until(EC.presence_of_element_located((
+            By.CSS_SELECTOR, 
+            f"div[aria-label='{aria_label}']"
+            )))
+       
+        select_dep_click_2 = select_dep_click.find_element(By.CSS_SELECTOR, "span.custom-day")
+        select_dep_click_2.click()
+        print(f"Departure date {aria_label} entered successfully!")
+        print("Script still running...")
+        print("")
     
-        # select_date1 = wait.until(EC.element_to_be_clickable((By.XPATH, f"//span[contains(.,'{month} {year}')]")))
-        print(f"Destination {dep_date} entered successfully!")
+    
+    def select_ret_date(self, day:str, month:str, date:str, year:int):
+        wait = WebDriverWait(self, 8)
+        aria_label = f"{day}, {month} {date}, {year}"
+        select_dep_click = wait.until(EC.presence_of_element_located((
+            By.CSS_SELECTOR, 
+            f"div[aria-label='{aria_label}']"
+            )))
+        
+        select_dep_click_2 = select_dep_click.find_element(By.CSS_SELECTOR, "span.custom-day")
+        select_dep_click_2.click()
+        print(f"Return date {aria_label} entered successfully!")
+        print("Script still running...")
+        print("")
+    
+
+    def select_passengers(self, adl_cnt:int, chd_cnt:None, inf_cnt:None):
+        wait = WebDriverWait(self, 8)
+        
+        select_adults = wait.until(EC.presence_of_element_located((
+            By.XPATH, 
+            f"//div[@class='mb-4']//"
+            )))
+        
+        select_adults_2 = select_adults.find_element(By.CSS_SELECTOR, f"span[contains(text(),'{adl_cnt}')]")
+        select_adults_2.click()
+       
+        print(f"{adl_cnt} entered successfully!")
         print("Script still running...")
         print("")
         
