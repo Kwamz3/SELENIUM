@@ -102,16 +102,31 @@ class Booking(webdriver.Chrome):
     def select_dep_date(self, day:str, month:str, date:str, year:int):
         wait = WebDriverWait(self, 8)
         aria_label = f"{day}, {month} {date}, {year}"
-        select_dep_click = wait.until(EC.presence_of_element_located((
-            By.CSS_SELECTOR, 
-            f"div[aria-label='{aria_label}']"
-            )))
+        month_check = self.find_element(By.XPATH, f"//div[normalize-space()='{month} {year}']")
+        user_date = f"{month} {year}"
+        
+                correct_month = wait.until(EC.presence_of_element_located((By.XPATH, f"//span[@class='date-label visible.{date}']")))
+        # try:
+        #     if month_check == user_date:
+        #         correct_month = wait.until(EC.presence_of_element_located((By.XPATH, f"//span[@class='date-label visible.{date}']")))
+                
+                
+                
+                # next_month = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "button[title='Next month']")))
+                # next_month_2 = wait.until(EC.element_to_be_clickable(next_month))
+                # next_month_2.click()
+                
+        
+        # select_dep_click = wait.until(EC.presence_of_element_located((
+        #     By.CSS_SELECTOR, 
+        #     f"div[aria-label='{aria_label}']"
+        #     )))
        
-        select_dep_click_2 = select_dep_click.find_element(By.CSS_SELECTOR, "span.custom-day")
-        select_dep_click_2.click()
-        print(f"Departure date {aria_label} entered successfully!")
-        print("Script still running...")
-        print("")
+        # select_dep_click_2 = select_dep_click.find_element(By.CSS_SELECTOR, "span.custom-day")
+        # select_dep_click_2.click()
+        # print(f"Departure date {aria_label} entered successfully!")
+        # print("Script still running...")
+        # print("")
     
     
     def select_ret_date(self, day:str, month:str, date:str, year:int):
