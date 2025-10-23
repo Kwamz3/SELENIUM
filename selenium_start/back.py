@@ -127,20 +127,55 @@ class Booking(webdriver.Chrome):
         print(f"Return date {aria_label} entered successfully!")
         print("Script still running...")
         print("")
-    
 
-    def select_passengers(self, adl_cnt:int, chd_cnt:None, inf_cnt:None):
-        wait = WebDriverWait(self, 8)
         
-        select_adults = wait.until(EC.presence_of_element_located((
+    def select_passengers(self, adl_cnt: int, chd_cnt: int , inf_cnt: int):
+        wait = WebDriverWait(self, 10)
+        adult_section = wait.until(EC.presence_of_element_located((
             By.XPATH, 
-            f"//div[@class='mb-4']//"
-            )))
+            f"//a[@class='passenger-number']//span[contains(text(),'{adl_cnt}')]"
+            )))  
+        adult_section_2 = wait.until(EC.element_to_be_clickable(adult_section))
+        adult_section_2.click()
+        time.sleep(0.5) 
         
-        select_adults_2 = select_adults.find_element(By.CSS_SELECTOR, f"span[contains(text(),'{adl_cnt}')]")
-        select_adults_2.click()
-       
-        print(f"{adl_cnt} entered successfully!")
+        adult_section_3 = wait.until(EC.presence_of_element_located((
+            By.XPATH, 
+            f"//div[@class='d-flex gap-4 mb-4']//div//a[@class='passenger-number']//span[contains(text(),'2')]"
+            )))  
+        # f"//a[@class='passenger-number']//span[contains(text(),'{adl_cnt}')]"
+        adult_section_4 = wait.until(EC.element_to_be_clickable(adult_section_3))
+        adult_section_4.click() 
+        time.sleep(0.5) 
+        
+        adult_section_5 = wait.until(EC.presence_of_element_located((
+            By.XPATH, 
+            f"(//span[contains(text(),'{inf_cnt}')])[3]"
+            )))  
+        adult_section_6 = wait.until(EC.element_to_be_clickable(adult_section_5))
+        adult_section_6.click() 
+        time.sleep(0.5) 
+        
+        apply_button = wait.until(EC.presence_of_element_located(((
+            By.XPATH, 
+            "//button[normalize-space()='Apply']"
+            ))))
+        apply_button_2 = wait.until(EC.element_to_be_clickable(apply_button))
+        apply_button_2.click()
+        
+        time.sleep(0.5)
+        
+        search_button = wait.until(EC.presence_of_element_located((
+            By.XPATH, 
+            "//button[normalize-space()='Apply']"
+            )))
+        search_button_2 = wait.until(EC.element_to_be_clickable(search_button))
+        search_button_2.click()
+        
+        tot_passengers = adl_cnt + chd_cnt + inf_cnt
+        
+        print(f"Passengers section completed successfully")
+        print(f"{tot_passengers} Passengers in total: {adl_cnt} Adult(s), {chd_cnt} child(ren) and {inf_cnt}infant(s)")
         print("Script still running...")
         print("")
         

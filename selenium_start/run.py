@@ -8,6 +8,6 @@ with Booking() as bot:
     bot.select_city(place_from="Accra")
     bot.select_destination(place_to="Berlin")
     bot.select_dep_date(day="Friday", month="October", date="31", year=2025)
-    bot.select_ret_date(day="Friday", month="November", date="28", year=2025)
-    bot.select_passengers(adl_cnt=4, chd_cnt=None, inf_cnt=None)
+    bot.select_ret_date(day="Monday", month="December", date="28", year=2025)
+    bot.select_passengers(adl_cnt=2, chd_cnt=3, inf_cnt=2)
     bot.intentional_wait(30)
