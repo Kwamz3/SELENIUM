@@ -159,7 +159,7 @@ class Booking(webdriver.Chrome):
         
         # Calendar should already be open after departure date selection
         # Add a small delay to let the calendar stabilize
-        time.sleep(1.5)
+        time.sleep(0.5)
         
         print(f"Attempting to select return date: {aria_label}")
         print("Script still running...")
