@@ -280,9 +280,9 @@ class Booking(webdriver.Chrome):
         print("")
         
     def intentional_wait(self, time_allocated):
-        print("Script run successfully")
+        print("Script run successfully!")
         print("Booking has been been completed successfully!")
-        print(f"Script will auto-close in {time_allocated}")
+        print(f"Script will auto-close in {time_allocated} seconds")
         time.sleep(time_allocated)
         
     def stop_driver(self):
